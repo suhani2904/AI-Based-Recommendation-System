@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Recommendations </title>
+        <link rel = "stylesheet" href = "{{url_for('static' , filename = 'Styles/recommend.css')}}">
+    </head>
+    <body>
+        <h1>
+            Here are some Recommendations
+        </h1>
+        <div class="recommendations-container">
+        {% for list in lists %}
+        
+    <div class="box">
+        <h3>{{ list.projectId[0] }}</h3>
+        <p><strong>Skills:</strong> {{ list.skills[0] }}</p>
+        <p><strong>Title:</strong> {{ list.title[0] }}</p>
+        <p><strong>Country:</strong> {{ list.country [0]}}</p>
+        <p><strong>Hourly Rate:</strong> {{ list.hourly[0] }} INR</p>
+        <p><strong>Experience: </strong>{{list.experience[0]}}</p>
+    </div>
+    {% endfor %}
+    </div>
+    </body>
+</html>

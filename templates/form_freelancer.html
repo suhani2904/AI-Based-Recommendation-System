@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>finding jobs form</title>
+        <link rel="stylesheet" href = "{{url_for('static' , filename = 'Styles/form.css')}}">
+    </head>
+    <body>
+        <div class = 'title'>
+            <h1>
+                Freelancer Details
+            </h1>
+            </div>
+        <div class = "form">
+            <div class = "details">
+        <form action = '/login_1' methods="post" autocomplete="on">
+            <label for = "name" >Username</label>
+            <input type = "text" id = "name" name = "freelancer" placeholder="Create new Username">
+            <label for = "skills">Skills</label>
+            <input type = "text" id = "skills" name = "skills" placeholder="Separated by comma e.g java , python , c++" class = "skills">
+            <label for = "Hourly">Hourly Rate</label>
+            <input type ="number" id = "hourly" name = "hourly" placeholder="(in INR)">
+            <br>
+            <br>
+            <label for = "total_hours">Total Hours </label>
+            <input type = "number" id = "total_hours" name = "total_hours" placeholder="Enter Total Hours">
+            <label for = "rate">Yours Rating </label>
+            <input type = "number" id = "rate" name = "rate" min="0" max="5" step="0.1"  placeholder="Enter ratings">
+
+            <label for = "country">Country</label>
+            <input type = "text" id = "country" name = "country" placeholder="Enter Country">
+            <br>
+            <br>
+            <label for = "experience">experience</label>
+            <select id = "experience" name = "experience">
+                <option value = ""></option>
+                <option value = "Entry Level">Entry Level</option>
+                <option value = "Intermediate">Intermediate</option>
+                <option value = "Expert">Expert</option>
+            </select>
+            <label for = "job success">Job Success(%)</label>
+            <input type = "number" name = "job success" id = "job success" placeholder="Enter Job Success">
+            <br>
+            <br>
+            <label for = "title"> Title</label>
+            <input type = "text" name = "title" id = "title" placeholder="e.g. Machine Learning , Web Developer">
+           
+            <label for = "password">Password</label>
+            <input type ="text" name  = "password" id = "password" placeholder="create password" >
+            <br>
+            <br>
+            <label for = "description">Description</label>
+            <textarea name = "description" rows = "10" cols = "30" id = "description" placeholder="e.g , I am master environmental protection analyst and a freelancer .I have 5+ years of experience on Upwork platform and I have wide knowledge in Web Research, Data Mining, Data Entry, Lead Generation, Market Research and Reporting, Light Project Management.I have also been involved in several ecology and environment protection projects outside the Upwork where I had the opportunity to build skills in project management, data gathering and analysis, visualization and presentation.Looking for different and interesting jobs and if you are looking for a full-time or a part -time freelancer who is dedicated and communicative, I'm the right person for you.Hope to work with You, all the best!
+            "></textarea>
+            <br>
+            <br>
+            <button class = "submit">
+                Login
+            </button>
+            <br>
+            <div>
+                <a href="/submit1">Already have a account
+            </div>
+        </form>
+        </div>
+        </div>
+    </body>
+</html>

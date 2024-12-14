@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Login Page
+        </title>
+        <link rel="stylesheet" href = "{{url_for('static' , filename = 'Styles/form.css')}}">
+    </head>
+    <body>
+        <div class = 'title'>
+            <h1>
+                LOGIN PAGE
+            </h1>
+            </div>
+        <div class = "form">
+            <div class = "details">
+        <form action = '/signin_2' methods="post" autocomplete="on">
+            <label for = "name" >Company Name</label>
+            <input type = "text" id = "name" name = "name" placeholder="Enter Company Name">
+            <label for = "skills">password</label>
+            <input type = "text" id = "password" name = "password" placeholder="Enter password" class = "skills">
+            <br>
+            <br>
+            <button class = "submit">
+                Find Freelancers
+            </button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>finding jobs form</title>
+        <link rel="stylesheet" href = "{{url_for('static' , filename = 'Styles/form.css')}}">
+    </head>
+    <body>
+        <div class = 'title'>
+            <h1>
+                Company Details
+            </h1>
+            </div>
+        <div class = "form">
+            <div class = "details">
+        <form action = '/login_2' method="post" autocomplete="on">
+            <label for = "name" >Company Name</label>
+            <input type = "text" id = "name" name = "name" placeholder="Enter Company Name">
+            <label for = "skills">Skills Required</label>
+            <input type = "text" id = "skills" name = "skills" placeholder="Separated by comma e.g java , python , c++" class = "skills">
+            <label for = "Hourly">Hourly Rate</label>
+            <input type ="number" id = "hourly" name = "hourly" placeholder="(in INR)">
+            <br>
+            <br>
+            <label for = "total_hours">Total Hours </label>
+            <input type = "number" id = "total_hours" name = "total_hours" placeholder="Enter Total Hours">
+            <label for = "rate">Client Rating </label>
+            <input type = "number" id = "rate" name = "rate" min="0" max="5" step="0.1" placeholder="Enter ratings">
+            <br>
+            <br>
+            <label for = "country">Country</label>
+            <input type = "text" id = "country" name = "country" placeholder="Enter Country">
+            <label for = "experience">experience</label>
+            <select id = "experience" name = "experience">
+                <option value = ""></option>
+                <option value = "Entry Level">Entry Level</option>
+                <option value = "Intermediate">Intermediate</option>
+                <option value = "Expert">Expert</option>
+            </select>
+            <label for = "job success">Job Success(%)</label>
+            <input type = "number" name = "job success" id = "job success" placeholder="Enter Job Success">
+            <br>
+            <br>
+            <label for = "title">Job Title</label>
+            <input type = "text" name = "title" id = "title" placeholder="e.g. Develop an AI website from the ground up">
+        
+            <label for = "password">Password</label>
+            <input type ="text" name  = "password" id = "password" placeholder="create password" >
+            <br>
+            <br>
+            <label for = "description">Job Description</label>
+            <textarea name = "description" rows = "10" cols = "30" id = "description" placeholder="e.g , I am looking for a freelancer who can help me with a data scraping project. I need to scrape data from a single website and the data that I need to be scraped is contact information. The scraped data will be used for research purposes.  Skills and Experience: - Proficient in web scraping techniques and tools - Experience in scraping data from single websites - Strong attention to detail to ensure accurate data scraping - Familiarity with data manipulation and cleaning techniques - Ability to deliver the scraped data in a structured format for easy analysis 
+            "></textarea>
+            <br>
+            <br>
+            <button class = "submit">
+                Login 
+            </button>
+            <br>
+            <div>
+                <a href="/submit2">Already have a account
+            </div>
+        </form>
+        </div>
+        </div>
+    </body>
+</html>
