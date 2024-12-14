@@ -19,7 +19,7 @@ Objective: This project is an AI-powered recommendation system for freelancers a
 
 
 ## Project Structure
-
+```
 AI-recommendation/
 |
 ├── backend/                 # Backend folder
@@ -48,6 +48,7 @@ AI-recommendation/
 │   └── recommendations.html
 |
 └── README.md               # Documentation (this file)
+```
 
 
 | **Technology**    | **Purpose**                   |
