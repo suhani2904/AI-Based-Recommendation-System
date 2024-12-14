@@ -22,10 +22,13 @@ Objective: This project is an AI-powered recommendation system for freelancers a
 ```
 AI-recommendation/
 |
-├── backend/                 # Backend folder
+├── backend Flask/                 # Backend folder
 │   ├── app.py               # Main Flask app
 |   ├── AI_freelancer.ipynb  # Jupyter Notebook for analysis
-│   └── Data/                # Data storage folder
+|   ├── Datasets/
+|   |   ├── upwork_data_scientists.csv
+|   |   ├── freelancer_job_postings.csv
+│   └── Data pickle/                # Data storage folder
 │       ├── freelancer_2.pkl
 │       ├── jobs_2.pkl
 │       ├── update_free.pkl
