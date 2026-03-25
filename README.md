@@ -1,76 +1,144 @@
-# AI-Based-Recommendation-System
+# 💼 SkillSync - AI-Powered Job & Candidate Matching Platform
 
-Objective: This project is an AI-powered recommendation system for freelancers and companies. It matches freelancers with jobs and vice versa using similarity metrics on their respective skills, titles, and other parameters. Built using **Flask**, **scikit-learn**, and **pandas**.
+## 📌 Overview
+SkillSync is an AI-powered platform designed to intelligently match freelancers and job seekers with relevant job opportunities based on their skills and requirements.
 
-## Features
+Instead of relying on keyword-based matching, SkillSync uses **semantic similarity and vector search** to understand the true meaning of job descriptions and candidate profiles, enabling more accurate and efficient hiring.
 
-- **Freelancer Recommendations:** Suggests jobs for freelancers based on their skills and other attributes.
-- **Job Recommendations:** Matches companies with the most suitable freelancers for their projects.
-- **User Authentication:** Allows freelancers and companies to log in securely.
-- **Data Storage:** Stores and updates user and job data in `.pkl` files.
+---
 
+## 🚀 Features
+- 🔍 Semantic job-candidate matching using embeddings
+- ⚡ Fast similarity search using FAISS
+- 📊 Real-time matching with similarity scores
+- 🧠 Context-aware recommendations (not just keyword matching)
+- 💻 Interactive dashboard for recruiters and candidates
+- 📈 Scalable pipeline for large datasets
 
-|File             	| Description                                     |
-|-------------------|----------------------------------------------   |
-|freelancer_2.pkl	  |  Stores freelancer names and preprocessed tags. |
-|jobs_2.pkl	        |  Stores job project IDs and preprocessed tags.  |
-|update_free.pkl	  |  Detailed freelancer information.               |
-|update_jobs.pkl    |  Detailed job information.                      |
+---
 
+## 🛠️ Tech Stack
+
+**Languages**
+- Python
+
+**Libraries & Frameworks**
+- Sentence Transformers
+- FAISS (Facebook AI Similarity Search)
+- NumPy
+- Pandas
+- Scikit-learn
+- Streamlit
+
+---
+
+## 🧠 How It Works
+
+### 1. Data Input
+- Candidate profiles (skills, experience, interests)
+- Job descriptions (requirements, responsibilities)
+
+---
+
+### 2. Embedding Generation
+- Convert text data into dense vector embeddings using **Sentence Transformers**
+- Captures semantic meaning instead of just keywords
+
+---
+
+### 3. Vector Indexing
+- Store embeddings in **FAISS index**
+- Enables fast similarity search even for large datasets
+
+---
+
+### 4. Matching Algorithm
+- Compute similarity between job and candidate embeddings
+- Rank results based on cosine similarity
+
+---
+
+### 5. Output
+- Top matching jobs for candidates
+- Best candidate recommendations for recruiters
+- Display similarity scores for transparency
+
+---
+
+## 📊 Example Workflow
+
+1. User inputs a job description  
+2. System converts it into embeddings  
+3. FAISS retrieves top matching candidate profiles  
+4. Results are ranked and displayed with similarity scores  
+
+---
 
 ## Project Structure
 ```
-AI-recommendation/
-|
-├── backend Flask/                 # Backend folder
-│   ├── app.py               # Main Flask app
-|   ├── AI_freelancer.ipynb  # Jupyter Notebook for analysis
-|   ├── Datasets/
-|   |   ├── upwork_data_scientists.csv
-|   |   ├── freelancer_job_postings.csv
-│   └── Data pickle/                # Data storage folder
-│       ├── freelancer_2.pkl
-│       ├── jobs_2.pkl
-│       ├── update_free.pkl
-│       └── update_jobs.pkl
-|
-├── static/                 # Static assets
-│   ├── Scripts/
-│   │   └── Home.js         # JavaScript for frontend
-│   └── Styles/             # CSS for styling
-│       ├── form.css
-│       ├── index.css
-│       └── recommend.css
-|
-├── templates/              # HTML templates
-│   ├── form_freelancer.html
-│   ├── form_jobs.html
-│   ├── Home.html
-│   ├── login_freelancer.html
-│   ├── login_jobs.html
-│   └── recommendations.html
-|
-└── README.md               # Documentation (this file)
+AI-Based-Recommendation-System
+│
+├── Dataset_cleaning_and_embedding
+│ └── datasets_cleaning_and_embedding.ipynb
+│
+├── datasets
+│ ├── preprocessed_datasets
+│ │ ├── candidates_preprocessed.csv
+│ │ ├── jobs_preprocessed.csv
+│ │
+│ ├── job_dataset.csv
+│ └── upwork_data_scientists.csv
+│
+├── embeddings
+│ ├── candidate_index.faiss
+│ └── job_index.faiss
+│
+├── pages
+│ ├── candidate_page.py
+│ └── recruiter_page.py
+│
+├── app.py
+├── new_profile_preprocessing.py
+├── requirements.txt
+└── README.md
 ```
 
 
-| **Technology**    | **Purpose**                   |
-|-------------------|-------------------------------|
-| Flask             | Backend Web Framework         |
-| Pandas            | Data Manipulation             |
-| Scikit-learn      | Vectorization & Similarity    |
-| HTML/CSS/JS       | Frontend                      |
-| Pickle            | Data Storage                  |
 
-## Routes
-|Route	Method	             |  Description                                  |
-|---------------------------|---------------------------------------------- |
-|/	GET	                     |  Renders the homepage.                        |
-|/freelancer	GET	           |  Renders freelancer form.                     |
-|/jobs	GET	                 |  Renders job form.                            |
-|/login_1 GET	             |  Processes freelancer login and recommendations.|
-|/login_2	POST/GET	       |  Processes job login and recommendations.      |
-|/submit1 / /submit2	GET    |  Redirects to login pages.                     |
-|/signin_1 / /signin_2	POST |	Validates login credentials.                  |
+---
+
+
+---
+
+## ⚙️ Installation
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/your-username/SkillSync.git
+cd SkillSync
+```
+### 2️⃣ Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+### 3️⃣ Run the App
+```bash
+streamlit run app.py
+```
+### 4️⃣ Open in Browser
+```bash
+http://localhost:8501
+```
+
+##⚠️ Notes
+- Ensure datasets are in correct folders
+
+- Make sure FAISS index is created before running
+
+- Install FAISS if needed:
+
+```bash
+pip install faiss-cpu
+```
 
 
